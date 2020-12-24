@@ -57,7 +57,11 @@ function draw() {
   rope3.display();
   rope4.display();
   rope5.display();
-  if (keyCode===32) {
-	  bob1.velocityX(-50);
+  
+}
+
+function keyPressed(){
+  if (keyCode === LEFT_ARROW){
+    Body.applyForce(bob1.body,bob1.body.position,{x: -50, y: -50});
   }
 }
